@@ -12,9 +12,9 @@ if answer == "left":
         if answer == "cross":
             answer = input("You decided to cross the river by boat and catch a fish with a net. You got lucky, and got a fish. You can set up camping on the other side of the river or you can eat a raw fish (sushi style) and keep moving  (Type: Walk/Camp)? ").lower()
             if answer == "walk":
-                print("The raw fish didn't agree with you, you got diarrhoea for hours and died")
+                print("The raw fish didn't agree with you, you got diarrhea for hours and died.")
             elif answer == "camp":
-                answer = input("You decide to camp, cooked the fish, boiled some water, and camp for the night. In the morning you were well rested and you can decide to take the boat and go with the flow of the river or leave the boat behind and keep walking (Type: River/Walk)").lower()
+                answer = input("You decided to camp, cooked the fish, boiled some water, and camp for the night. In the morning you were well rested and you can decide to take the boat and go with the flow of the river or leave the boat behind and keep walking (Type: River/Walk)").lower()
                 if answer == "river":
                     answer = input("The raw fish didn't agree with you, you got diarrhoea for hours and died").lower()
                 elif answer == "walk":
@@ -59,7 +59,7 @@ if answer == "left":
                     else:
                         print("Not a valid option. You lost.")
                 elif decision == "no":
-                    print("You decide it's too risky to cross the river at this point. You return to your camp to rest and reconsider your options.")
+                    print("You decided it's too risky to cross the river at this point. You return to your camp to rest and reconsider your options.")
                     decision = input("You decided to walk along the river. You came across a stranger? You can talk to him. (Type: Yes/No) ").lower()
                     if decision == "yes":
                         print("The stranger was a bad man. He shot you and throw your body into the river, You died").lower()
@@ -71,7 +71,7 @@ if answer == "left":
                     print("Not a valid option. You lost.")
             elif next_action == "explore":
                 print("You decide to explore the area around your camp. You find some interesting landmarks and gather useful resources as wood for campfire and mushrooms.")
-                answer = input("You are realy hungry and you decided to cook dinner. You can make a mushrooms soup or try to hunt (Type: Soup/Hunt)? ").lower()
+                answer = input("You are really hungry and you decided to cook dinner. You can make a mushrooms soup or try to hunt (Type: Soup/Hunt)? ").lower()
                 if answer == "hunt":
                     print("You didn't catch anything. Exhausted from your efforts, you find a comfortable spot to rest and soon drift off to sleep.")
                     print("You awaken to the sensation of raindrops falling gently against your cheeks. Opening your eyes, you find yourself back in your own bed.")
@@ -133,7 +133,7 @@ elif answer =="right":
             elif answer == "forest":
                 answer = input("You enter the dense forest and you cam across berries. You can eat them or continue looke for another food (Type: Berries/Walk)").lower()
                 if answer == "berries":
-                    print("You ate poison berries, you felt aslep and never wake up")
+                    print("You ate poison berries, you felt asleep and never woke up.")
                 elif answer == "walk":
                     answer = input("You walk few miles and came across a big moose. You can try to avoid it, you can try to make it your pet (Type: Avoid/Pet)").lower()
                     if answer == "avoid":
@@ -161,7 +161,7 @@ elif answer =="right":
                                 else:
                                     print("Not a valid option. You lost.")
                             elif answer == "no fire":
-                                print("You frozed to death and died.")
+                                print("You froze to death and died.")
                             else:
                                 print("Not a valid option. You lost.")
                         elif answer == "walk":
@@ -169,7 +169,7 @@ elif answer =="right":
                         else:
                             print("Not a valid option. You lost.")
                     elif answer == "pet":
-                        print("You mad the mighty moose angry, he charged at you and kill you.")
+                        print("You made the mighty moose angry, he charged at you and killed you.")
                     else:
                         print("Not a valid option. You lost.")
                 else:
