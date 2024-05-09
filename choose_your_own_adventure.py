@@ -7,10 +7,9 @@ if answer == "left":
     answer = input("You were walking for hours and you found a river, you can walk around it or swim across it (Type: Around/Across)? ").lower()
 
     if answer == "around":
-        answer = input("You walk for hours, you are are hungry and thirsty. You see the boat. You can take the boat to cross the river (maybe to catch the fish), or you can set up a camping and rest (Type: Cross/Camp)? ").lower()
-
+        answer = input("You've been walking for hours, feeling hungry and thirsty. You spot a boat. You can take the boat to cross the river (maybe catch a fish), or you can set up camp and rest. What will you do? (Type: Cross/Camp) ").lower()
         if answer == "cross":
-            answer = input("You decided to cross the river by boat and catch a fish with a net. You got lucky, and got a fish. You can set up camping on the other side of the river or you can eat a raw fish (sushi style) and keep moving  (Type: Walk/Camp)? ").lower()
+            print("You decide to cross the river by boat and catch a fish with a net. You get lucky and catch a fish. Now, you can set up camp on the other side of the river, or you can eat the raw fish (sushi style) and keep moving. What will you do? (Type: Walk/Camp) ").lower()
             if answer == "walk":
                 print("The raw fish didn't agree with you, you got diarrhea for hours and died.")
             elif answer == "camp":
@@ -189,4 +188,4 @@ elif answer =="right":
 else:
     print("Not valid option. You lost")
 
-print("Thank you for playing", name,"Have a wonderful day")
+print("Thank you for playing", name,"Have a wonderful day!")
