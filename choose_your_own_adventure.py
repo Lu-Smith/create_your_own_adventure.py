@@ -12,7 +12,26 @@ if answer == "left":
         if answer == "cross":
             answer = input("You decided to cross the river by boat and catch a fish with a net. You got lucky, and got a fish. You can set up camping on the other side of the river or you can eat a raw fish (sushi style) and keep moving  (Type: Walk/Camp)? ")
         elif answer =="camp":
-            answer = input("You set up the fire, boiled some water, try fishing ( but you didn't catch anything), and go to sleep. In the morning, you can take a boat to cross the river, or you can go fishing and back to your camp (Type: Cross/Fish)")
+            print("You set up camp, cooked some food, drank water, and rested. In the morning, you can take the boat to cross the river, or you can explore the area.")
+            next_action = input("What would you like to do in the morning? (Type: Cross/Explore) ").lower()
+    
+            if next_action == "cross":
+                print("You pack up your camp, prepare to cross the river, and embark on the journey.")
+                decision = input("As you approach the river, you notice the water is flowing fast. Do you still want to cross it? (Type: Yes/No) ").lower()
+                
+                if decision == "yes":
+                    print("You cautiously enter the water and start crossing. The current is strong, but you manage to reach the other side safely.")
+                    # Add more code here for what happens after crossing the river successfully
+                elif decision == "no":
+                    print("You decide it's too risky to cross the river at this point. You return to your camp to rest and reconsider your options.")
+                    # Add more code here for what happens if the player decides not to cross the river
+                else:
+                    print("Not a valid option. You lost.")
+            elif next_action == "explore":
+                print("You decide to explore the area around your camp. You find some interesting landmarks and gather useful resources.")
+                # Add more code here for the exploration scenario
+            else:
+                print("Not a valid option. You lost.")
         else:
             print("Not valid option. You lost")
     elif answer =="across":
