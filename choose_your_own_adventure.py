@@ -70,21 +70,52 @@ if answer == "left":
                 else:
                     print("Not a valid option. You lost.")
             elif next_action == "explore":
-                print("You decide to explore the area around your camp. You find some interesting landmarks and gather useful resources.")
-                # Add more code here for the exploration scenario
+                print("You decide to explore the area around your camp. You find some interesting landmarks and gather useful resources as wood for campfire and mushrooms.")
+                answer = input("You are realy hungry and you decided to cook dinner. You can make a mushrooms soup or try to hunt (Type: Soup/Hunt)? ").lower()
+                if answer == "hunt":
+                    print("You didn't catch anything. Exhausted from your efforts, you find a comfortable spot to rest and soon drift off to sleep.")
+                    print("You awaken to the sensation of raindrops falling gently against your cheeks. Opening your eyes, you find yourself back in your own bed.")
+                    print("As you slowly come to your senses, you realize that your faithful dog, Max, is licking your face with enthusiasm, welcoming you back from your adventure.")
+                elif answer == "soup":
+                    print("The soup was filled with magic mushrooms. As you take a sip, a wave of warmth and euphoria washes over you, and your senses become heightened.")
+                    print("In a flash, your mind is flooded with incredible visions, revealing insights on how to improve the world and find your way home.")
+                    print("The mushrooms seem to unlock hidden wisdom within you, guiding you towards newfound clarity and purpose.")
+                else:
+                    print("Not a valid option. You lost.")
             else:
                 print("Not a valid option. You lost.")
         else:
             print("Not valid option. You lost")
     elif answer =="across":
         answer = input("After hours of walking you see a forest, you can walk around it or go through the forest (Type: Around/Forest)? ").lower()
+        if answer == "around":
+            answer = input("Is getting dark. You are tired, thirsty and hungry. You came across a wolf. You can run into a forest or stay (Type: Forest/Stay)").lower()
+            if answer == "stay":
+                print("The wolf was not alone, you got surrounded and became a dinner")
+            elif answer == "forest":
+                print("You walk into the forest. As you venture deeper, the forest seems to come alive with strange sounds, and you start to feel a sense of enchantment surrounding you.")
+                print("After a while, the sky above you begins to dance with vibrant colors, casting an ethereal glow over the trees. The northern lights shimmer and swirl in mesmerizing patterns, creating a spectacle unlike anything you've ever seen.")
+                print("Suddenly, a figure emerges from the shadows, moving with grace and confidence. As he steps into the light, you catch a glimpse of a handsome goblin, his emerald eyes gleaming with mischief.")
+                print("He beckons you to follow him deeper into the forest, his charming smile inviting you on an adventure.")
+                print("As you walk together, the air is filled with laughter and the promise of discovery.")
+                print("Before you know it, you find yourself back at home, sitting by the fireplace with a cup of tea in hand. The memory of your encounter with the handsome goblin fills you with a sense of wonder and excitement, leaving you eager for more adventures in the enchanted forest.")
+            else:
+                print("Not a valid option. You lost.")
+        elif answer == "forest":
+            print("You walk into the forest. As you venture deeper, the forest seems to come alive with strange sounds, and you start to feel a sense of enchantment surrounding you.")
+            print("After a while, a gentle mist begins to form, swirling around you in delicate wisps. Suddenly, a soft glow emerges from within the mist, and you catch a glimpse of a figure flitting gracefully between the trees.")
+            print("Before you can fully comprehend what's happening, the figure reveals itself to be a forest fairy, with shimmering wings and a mischievous twinkle in her eyes.")
+            print("She beckons you to follow her deeper into the forest, and as you do, you feel a sense of warmth and wonder washing over you.")
+            print("After what feels like both moments and an eternity, you find yourself back at home, sitting by the fireplace with a cup of tea in hand. The memory of your encounter with the forest fairy lingers in your mind, filling you with a sense of magic and possibility.")
+        else:
+            print("Not a valid option. You lost.")
     else:
         print("Not valid option. You lost")
 elif answer =="right":
     answer = input("After hours of walking you see a forest, you can walk around it or go through the forest (Type: Around/Forest)? ").lower()
     
     if answer == "around":
-        answer = input("Is getting dark. Tou are tired, thirsty and hungry. You can set up the camp or continue walking (Type: Camp/Walk)").lower()
+        answer = input("Is getting dark. You are tired, thirsty and hungry. You can set up the camp or continue walking (Type: Camp/Walk)").lower()
         if answer == "camp":
             answer = input("You set up a camp and you fell asleep. In the morning you wake up to a playful bird song. You can try to catch the bird ans eat it or enter the forest (Type: Bird/Forest)")
             if answer == "bird":
@@ -146,13 +177,13 @@ elif answer =="right":
             else:
                 print("Not a valid option. You lost.")
         elif answer == "walk":
-            answer = input("You decide it's too risky to cross the river at this point. You return to your camp to rest and reconsider your options.")
-            # Add more code here for what happens if the player decides not to cross the river
+            print("You walk for days and died from exhaustion.")
         else:
             print("Not a valid option. You lost.")
     elif answer == "Forest":
-        answer = input("You decide it's too risky to cross the river at this point. You return to your camp to rest and reconsider your options.")
-        # Add more code here for what happens if the player decides not to cross the river
+        print("You walk into the forest. As you delve deeper, you start to feel overwhelmed by the strange sounds of the trees swaying in the strong wind. The atmosphere becomes eerie, and soon, a thick mist envelops the entire forest, obscuring your vision.")
+        print("Surprisingly, the mist carries a familiar smell of coffee and toast, which comforts you amidst the uncertainty of your surroundings.")
+        print("Suddenly, as if in a blink of an eye, you find yourself at home, sitting at your dining table, enjoying a hearty breakfast. The events in the forest feel like a distant memory, leaving you wondering if it was all just a surreal dream.")
     else:
         print("Not a valid option. You lost.")
 else:
