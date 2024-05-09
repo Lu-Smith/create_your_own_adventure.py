@@ -60,8 +60,13 @@ if answer == "left":
                         print("Not a valid option. You lost.")
                 elif decision == "no":
                     print("You decide it's too risky to cross the river at this point. You return to your camp to rest and reconsider your options.")
-                    decision = input("As you approach the river, you notice the water is flowing fast. Do you still want to cross it? (Type: Yes/No) ").lower()
-                    # Add more code here for what happens if the player decides not to cross the river
+                    decision = input("You decided to walk along the river. You came across a stranger? You can talk to him. (Type: Yes/No) ").lower()
+                    if decision == "yes":
+                        print("The stranger was a bad man. He shot you and throw your body into the river, You died").lower()
+                    elif decision == "no":
+                        print("You were to afraid to ask about help and kept walking until you died from the exhaustion.")
+                    else:
+                        print("Not a valid option. You lost.")
                 else:
                     print("Not a valid option. You lost.")
             elif next_action == "explore":
@@ -72,7 +77,7 @@ if answer == "left":
         else:
             print("Not valid option. You lost")
     elif answer =="across":
-        answer = input("After hours of walking you see a forest, you can walk around it or go through the forest (Type: Around/Forest)? ")
+        answer = input("After hours of walking you see a forest, you can walk around it or go through the forest (Type: Around/Forest)? ").lower()
     else:
         print("Not valid option. You lost")
 elif answer =="right":
@@ -84,25 +89,34 @@ elif answer =="right":
             answer = input("You set up a camp and you fell asleep. In the morning you wake up to a playful bird song. You can try to catch the bird ans eat it or enter the forest (Type: Bird/Forest)")
             if answer == "bird":
                 answer = input("You cought the bird, eat your breakfast and continue walking. There is a storm coming. You can enter the forest for safety, you can try to collect the water? (Type: Forest/Water) ")
-                # Add more code here for what happens after crossing the river successfully
+                if answer == "forest":
+                    print("You walk into the forest. As you delve deeper, you start to feel overwhelmed by the strange sounds of the trees swaying in the strong wind. The atmosphere becomes eerie, and soon, a thick mist envelops the entire forest, obscuring your vision.")
+                    print("Surprisingly, the mist carries a familiar smell of coffee and toast, which comforts you amidst the uncertainty of your surroundings.")
+                    print("Suddenly, as if in a blink of an eye, you find yourself at home, sitting at your dining table, enjoying a hearty breakfast. The events in the forest feel like a distant memory, leaving you wondering if it was all just a surreal dream.")
+                elif answer == "water":
+                    print("You decided to collect and drink some water. At first, it was a great relief from thirst. But suddenly, the calm atmosphere shifts, and dark clouds gather overhead. The gentle breeze turns into a fierce wind, and before you know it, the storm intensifies into a tornado.")
+                    print("You try to find shelter, but the tornado sucks you in with its powerful force. The world spins around you, and you lose consciousness.")
+                    print("When you wake up, you find yourself lying in your bed, safe and sound. It seems like it was all just a vivid dream.")
+                else:
+                    print("Not a valid option. You lost.")
             elif answer == "forest":
-                answer = input("You enter the dense forest and you cam across berries. You can eat them or continue looke for another food (Type: Berries/Walk)")
+                answer = input("You enter the dense forest and you cam across berries. You can eat them or continue looke for another food (Type: Berries/Walk)").lower()
                 if answer == "berries":
                     print("You ate poison berries, you felt aslep and never wake up")
                 elif answer == "walk":
-                    answer = input("You walk few miles and came across a big moose. You can try to avoid it, you can try to make it your pet (Type: Avoid/Pet)")
+                    answer = input("You walk few miles and came across a big moose. You can try to avoid it, you can try to make it your pet (Type: Avoid/Pet)").lower()
                     if answer == "avoid":
-                        answer = input("You went around the mighty beast and came across the spring. You can drink the water or you can keep walking (Type: Drink/Walk)")
+                        answer = input("You went around the mighty beast and came across the spring. You can drink the water or you can keep walking (Type: Drink/Walk)").lower()
                         if answer == "drink":
-                            answer = input("The water was delicious and refreshing. You decide to stay and camp. You can set up a campfire, you can just fall asleep without the fire (Type: Fire/No Fire)")
+                            answer = input("The water was delicious and refreshing. You decide to stay and camp. You can set up a campfire, you can just fall asleep without the fire (Type: Fire/No Fire)").lower()
                             if answer == "fire":
-                                answer = input("You set up the campfire. The night was very cold, but the fire kept you alive. In the morning you decide to stay, or to keep moving (Type: Stay/Walk)")
+                                answer = input("You set up the campfire. The night was very cold, but the fire kept you alive. In the morning you decide to stay, or to keep moving (Type: Stay/Walk)").lower()
                                 if answer == "stay":
                                     print("You were not able to find enough food, the days become colder and you died starvation and hypotermia.")
                                 elif answer == "move":
-                                    answer = input("You kept walking, the forest beacame more clear and you found a tiny house. You can try to check it out, you keep walking (Type: Check/Walk)")
+                                    answer = input("You kept walking, the forest beacame more clear and you found a tiny house. You can try to check it out, you keep walking (Type: Check/Walk)").lower()
                                     if answer == "check":
-                                        answer = input("You knock, and an old witch welcome you and invited you in. You can go in or politely say no (Type: Yes/No)")
+                                        answer = input("You knock, and an old witch welcome you and invited you in. You can go in or politely say no (Type: Yes/No)").lower()
                                         if answer == "yes":
                                             print("You accepted the invitation, you started to help the old witch with home repairs and as a reward she help you to go back home.")
                                         elif answer == "no":
